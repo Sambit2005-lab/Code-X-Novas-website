@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  box-sizing: border-box;
+}
+.container {
+  padding: 20px;
+  background-color: #000;
+}
+
+.heading-text {
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.box {
+  background: rgb(104, 70, 152);
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.img-main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.offer-text{
+  margin-top: 20px;
+  font-weight: 300;
+}
+.box-text-left {
+  position: absolute;
+  background-color: rgba(3, 57, 84, 0.7);
+  color: #fff;
+  left: 10px;
+  bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.box-text-right {
+  position: absolute;
+  background-color: rgba(3, 57, 84, 0.7);
+  color: #fff;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.last-box {
+  grid-column: 1 / -1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.enroll-div{
+  margin-top: 20px;
+  text-align: right;
+}
+.enroll-button{
+   background-color: rgb(31, 68, 119);
+   border-radius: 6px;
+   color: #fff;
+   padding: 8px 16px;
+   border: none;
+   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .heading-text {
+      font-size: 24px;
+  }
+
+  .section {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+  }
+
+  .last-box {
+      grid-column: 1 / -1; 
+  }
+
+  .text {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  .heading-text{
+    font-size: 22px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .text{
+    font-size: 16px;
+  }
+}
