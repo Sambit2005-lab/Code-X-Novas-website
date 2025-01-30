@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: 200vh; /* Allow scrolling */
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  
+  .scroll-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .animated-text {
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    transform: translateY(50%);
+  }
+  
+  .letter {
+    position: relative;
+    opacity: 0;
+    transform: scale(2) translateY(-200px); /* Starts larger and out of place */
+    transition: all 0.5s ease-out;
+  }
+  
+  /* When active */
+  .letter.active {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Moves to its final position */
+  }
